@@ -1,3 +1,6 @@
-s = 'abcdef'
-for c in s:
-    print(c)
+s = input()
+count = 0
+for i in range(len(s)):
+    if s[i] in 'abcdefghijklmnopqrstuvwxyz':
+        count += 1
+print(count)
