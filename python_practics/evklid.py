@@ -1,4 +1,8 @@
-def gcd(a, b):
+def gcd(a, b):\
+    #а должно быть больше b
+    if a < b:
+        a, b = b, a
+        
     while b != 0:
         a, b = b, a % b
     return a

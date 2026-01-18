@@ -39,3 +39,18 @@ def find_max(arr):
         return max_el
 
 print(find_max([3, 9, 2]))
+
+
+def fib_rec(N, f=[1, 1]):
+    # Когда список достиг нужной длины, возвращаем первые N элементов
+    if len(f) >= N:
+        return f[:N]
+
+    # Рекурсивный случай:
+    f.append(f[-1] + f[-2])
+
+    return fib_rec(N, f)
+
+
+N = int(input())
+print(*fib_rec(N))
