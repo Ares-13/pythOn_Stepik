@@ -1,15 +1,15 @@
-def gcd(a, b):\
-    #а должно быть больше b
+def gcd(a, b):
+    # а должно быть больше b
     if a < b:
         a, b = b, a
-        
+
     while b != 0:
         a, b = b, a % b
     return a
 
 
 def test_gcd(func):
-    #--- тест
+    # --- тест
     a = 28
     b = 35
     res = func(a, b)
@@ -17,5 +17,6 @@ def test_gcd(func):
         print(True)
     else:
         print(False)
+
 
 test_gcd(gcd)

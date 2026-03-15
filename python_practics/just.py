@@ -1,6 +1,6 @@
 s = input()
 count = 0
 for i in range(len(s)):
-    if s[i] in 'abcdefghijklmnopqrstuvwxyz':
+    if s[i] in "abcdefghijklmnopqrstuvwxyz":
         count += 1
 print(count)

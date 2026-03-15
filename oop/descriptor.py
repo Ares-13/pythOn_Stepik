@@ -2,8 +2,8 @@ class Integer:
     @classmethod
     def verify_coord(cls, coord):
         if type(coord) != int:
-            raise TypeError('Должны быть целые числа')
-        
+            raise TypeError("Должны быть целые числа")
+
     def __set_name__(self, owner, name):
         self.name = "_" + name
 
@@ -14,6 +14,7 @@ class Integer:
         print(f"__set__: {self.name} = {value}")
         self.verify_coord(value)
         setattr(instance, self.name, value)
+
 
 class Point3D:
     x = Integer()
@@ -28,3 +29,5 @@ class Point3D:
 
 p = Point3D(1, 2, 3)
 print(p.__dict__)
+
+print(type(Integer))

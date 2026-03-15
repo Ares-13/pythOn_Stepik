@@ -4,14 +4,16 @@ def fact(n):
     else:
         return n + fact(n - 1)  # Рекурсивный случай
 
+
 print(fact(3))
 
 
 def sum(arr):
-    if len(arr) == 0: # Базовый случай
+    if len(arr) == 0:  # Базовый случай
         return 0
     else:
-        return arr[0] + sum(arr[1:]) # Рекурсивный случай
+        return arr[0] + sum(arr[1:])  # Рекурсивный случай
+
 
 print(sum([3, 6, 2]))
 
@@ -20,7 +22,8 @@ def count_el(arr):
     if len(arr) == 0:  # Базовый случай
         return 0
     else:
-        return 1 + count_el(arr[1:]) # Рекурсивный случай
+        return 1 + count_el(arr[1:])  # Рекурсивный случай
+
 
 print(count_el([3, 6, 2]))
 
@@ -38,6 +41,7 @@ def find_max(arr):
     else:
         return max_el
 
+
 print(find_max([3, 9, 2]))
 
 
@@ -54,8 +58,6 @@ def fib_rec(N, f=[1, 1]):
 
 N = int(input())
 print(*fib_rec(N))
-
-
 
 
 d = [1, 2, [True, False], ["Москва", "Уфа", [100, 101], ["True", [-2, -1]]], 7.89]

@@ -4,10 +4,11 @@ def quickSort(arr):
         return arr
     # Рекурсивный случай
     else:
-        pivot = arr[0] # Опорный элемент
+        pivot = arr[0]  # Опорный элемент
         less = [i for i in arr[1:] if i < pivot]  # Меньше опорного элемента
         greater = [i for i in arr[1:] if i > pivot]  # Больше опорного элемента
 
         return quickSort(less) + [pivot] + quickSort(greater)
+
 
 print(quickSort([-2, 3, 0, 10, 7]))

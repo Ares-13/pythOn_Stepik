@@ -26,6 +26,7 @@ class Vector:
     def norm2(x, y):
         return x**2 + y**2
 
+
 v = Vector(1, 20)
 res = v.get_coords()
 print(res)

@@ -55,3 +55,30 @@
 # print(*r)
 
 
+s = input()
+s1 = s.replace(" ", "")
+
+res = 0
+curr_num = ""
+operation = "+"
+
+for i, char in enumerate(s1):
+    if char.isdigit():
+        curr_num += char
+    elif char in "+-":
+        if curr_num:
+            if operation == "+":
+                res += int(curr_num)
+            else:
+                res -= int(curr_num)
+
+        curr_num = ""
+        operation = char
+
+    if i == len(s1) - 1 and curr_num:
+        if operation == "+":
+            res += int(curr_num)
+        else:
+            res -= int(curr_num)
+
+print(res)

@@ -25,6 +25,7 @@
 
 from string import ascii_letters
 
+
 class Person:
     S_RUS = "абвгдеёжзийклмнопрстуфхцчшщъыьэюя-"
     S_RUS_UPPER = S_RUS.upper()
@@ -40,25 +41,25 @@ class Person:
     @classmethod
     def verify_fio(cls, fio):
         if type(fio) != str:
-            raise TypeError('ФИО должно быть строкой')
+            raise TypeError("ФИО должно быть строкой")
 
         f = fio.split()
         if len(f) != 3:
-            raise TypeError('Неверный формат ФИО')
+            raise TypeError("Неверный формат ФИО")
 
         letters = ascii_letters + cls.S_RUS + cls.S_RUS_UPPER
 
         for s in f:
             if len(s) == 0:
-                raise TypeError('В ФИО должен быть хотя бы один символ')
+                raise TypeError("В ФИО должен быть хотя бы один символ")
             # список разрешенных символов
             if len(s.strip(letters)) != 0:
-                raise TypeError('В ФИО разрешаются только буквы и дефис')
+                raise TypeError("В ФИО разрешаются только буквы и дефис")
 
     @classmethod
     def verify_old(cls, old):
         if type(old) != int and 14 > old or old > 120:
-            raise TypeError('Возраст должен быть целым числом в диапазоне от 14 до 120')
+            raise TypeError("Возраст должен быть целым числом в диапазоне от 14 до 120")
 
     @classmethod
     def verify_weight(cls, w):
@@ -85,6 +86,7 @@ class Person:
     @property
     def old(self):
         return self.__old
+
     @old.setter
     def old(self, old):
         self.verify_old(old)
@@ -93,6 +95,7 @@ class Person:
     @property
     def weight(self):
         return self.__weight
+
     @weight.setter
     def weight(self, weight):
         self.verify_weight(weight)
@@ -101,6 +104,7 @@ class Person:
     @property
     def ps(self):
         return self.__ps
+
     @ps.setter
     def ps(self, ps):
         self.verify_ps(ps)
