@@ -1,41 +1,52 @@
-# Переменная - ячейка памяти,куда сохраняем мы значения(ссылка на обьект в памяти)
+# # Переменная - ячейка памяти,куда сохраняем мы значения(ссылка на обьект в памяти)
 
-#a = 5   # Int
-A = 10.5 # Float
-name = "Демид" # Str
+# #a = 5   # Int
+# A = 10.5 # Float
+# name = "Демид" # Str
 
-bool_a = True # Boolean
+# bool_a = True # Boolean
 
-#print(bool_a, a, name, A)
+# #print(bool_a, a, name, A)
 
-# = присвание
-# == равенство -> True/False
-
-
-a = 150
-b = 54 # каскадное присваивание 
-с, d = 100, 500 # Множественное присваивание 
-
-print(a, b)
+# # = присвание
+# # == равенство -> True/False
 
 
-a, b = b, a # операция обмена значениями
-print(a, b)
+# a = 150
+# b = 54 # каскадное присваивание 
+# с, d = 100, 500 # Множественное присваивание 
 
-print(type(a), type(name)) # type() чтобы узнать тип данных
-
-
-
-number1 = 3
-number2 = 10
+# print(a, b)
 
 
-# Основные арифметические операции
-print(number1 + number2) # сложение
-print(number2 - number1) # вычитание
-print(number1 * number2) # умножение
-print(number2 / number1) # деление
-print(number2 // number1) # деление(целое число)
-print(number2 % number1) # остаток деления
-print(number1**3) # возведение в степень
+# a, b = b, a # операция обмена значениями
+# print(a, b)
+
+# print(type(a), type(name)) # type() чтобы узнать тип данных
+
+
+
+# number1 = 3
+# number2 = 10
+
+
+# # Основные арифметические операции
+# print(number1 + number2) # сложение
+# print(number2 - number1) # вычитание
+# print(number1 * number2) # умножение
+# print(number2 / number1) # деление
+# print(number2 // number1) # деление(целое число)
+# print(number2 % number1) # остаток деления
+# print(number1**3) # возведение в степень
+
+# print("Эта переменная в степени 4: " + str(number1 ** 4))
+
+
+
+#---------------------------------------------
+
+s = "Право"
+s2 = "Яблоко"
+s3 = s
+
 

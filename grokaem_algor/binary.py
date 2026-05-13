@@ -4,6 +4,7 @@ def binary_search(list, item):
 
     while low <= high:
         mid = (low + high) // 2
+        print(f"Позиция центра: {mid}")
         guess = list[mid]
 
         if guess == item:
@@ -16,4 +17,4 @@ def binary_search(list, item):
 
 
 lst = [1, 4, 6, 7, 9]
-print(binary_search(lst, 10))
+print(binary_search(lst, 4))
